@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/styles2.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Cloud</title>
+</head>
+
+<body class="container">
+    <div class="titlerow" style="display: flex; align-content: center; justify-content: space-evenly;">
+        <img src="/images/controller.png" alt="50x50" style="width: 50px; height: 50px;">
+        <h1>Reporte Final</h1>
+        <div></div>
+    </div>
+
+    <div class="div" style="display: flex; align-items: center; justify-content: space-between;">
+        <div class="secondrow" >
+            <h3>Plataforma</h3>
+            <ul id="plataformaList" style="list-style: none;">
+               
+                <% datos.forEach(function(juego){ %>
+            
+                    <li value="<%= juego.PK_plataforma %>"> <%= juego.nombrePlataforma %> </li>
+    
+                <% }); %>
+
+            </ul>
+        </div>
+
+        <div class="thirdrow" >
+            <h3>Cantidad de Juegos </h3>
+            <ul id="cantidadJuegosList" style="list-style: none;">
+
+                <% datos.forEach(function(juego){ %>
+            
+                    <li value="<%= juego.PK_plataforma %>"> <%= juego.cantJuegos %> </li>
+    
+                <% }); %>
+
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

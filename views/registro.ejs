@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Cloud</title>
+</head>
+
+    <body class="container">
+
+        <form action="/registrar" method="post">
+
+            <div class="titlerow" style="display: flex; align-content: center; justify-content: space-evenly;">
+                <img src="/images/controller.png" alt="50x50" style="width: 50px; height: 50px;">
+                <h1>Registro de juegos</h1>
+                <div></div>
+            </div>
+        
+            <div class="secondrow" style="display: flex; align-items: center; justify-content: space-evenly;">
+                <h3>Plataforma</h3>
+                <span>
+                    <select name="pkPlataforma" id="platformSelect">
+                       
+                        <% plataformas.forEach(function(plataforma){ %>
+                    
+                            <option value="<%= plataforma.PK_plataforma %>" > <%= plataforma.nombre_plataforma %> </option>
+            
+                        <% }); %>
+        
+                    </select>
+                </span>
+            </div>
+        
+            <div class="thirdrow" style="display: flex; align-items: center; justify-content: space-evenly;">
+                <h3>Titulo del juego: </h3>
+                <span>
+                    <input type="text" id="gameTitleInput"  name="nombreJuego">
+                </span>
+            </div>
+        
+            <div style="text-align: right;">
+                <button style="background-color: lightblue; width: 100px; height: 30px;"  type="submit">Guardar</button>
+            </div>
+
+        </form>
+
+        
+    
+    </body>
+
+
+
+
+</html>
